@@ -1,0 +1,122 @@
+.hidden {
+    display: none;
+}
+
+html, body { 
+    width: 1920px;
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/fruit_background.jpg);
+    background-size: cover;
+}
+
+#logo {
+    width: 25vw;
+    display: flex;
+    margin: 0 auto;
+}
+
+#fruits {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#fruits svg {
+    height: 150px;
+    margin: 50px 175px;
+}
+
+/* Grapefruit */
+#Grapefruit:hover ~ #logo {
+    fill: #f15b57;
+}
+
+#Grapefruit:hover {
+    transform: rotate(720deg);
+    transition-duration: 2s;
+}
+
+/* Orange */
+#Orange:hover ~ #logo {
+    fill: #eeb348;
+}
+
+#Orange:hover {
+    filter: drop-shadow(5px 5px 10px gray);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Pineapple */
+#Pineapple:hover ~ #logo {
+    fill: #ffcc4d;
+}
+
+@keyframes bouncy {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+#Pineapple:hover {
+    animation: bouncy 0.5s ease-out infinite;
+}
+
+/* Lime */
+#Lime:hover ~ #logo {
+    fill: #88c057;
+}
+
+@keyframes wobbly {
+    0%, 100% { 
+        transform: rotate(-5deg); 
+    }
+    50% { 
+        transform: rotate(5deg); 
+    }
+}
+
+#Lime:hover {
+    animation: wobbly 0.5s ease infinite;
+}
+
+/* Blueberry */
+#Blueberry:hover ~ #logo {
+    fill: #5b65ae;
+}
+
+@keyframes squishy {
+    0%, 100% {
+        transform: scaleY(1) scaleX(1);
+    }
+    25% {
+        transform: scaleY(0.5) scaleX(1.2);
+    }
+    50% {
+        transform: scaleY(1) scaleX(0.5);
+    }
+    75% {
+        transform: scaleY(0.5) scaleX(1.2);
+    }
+}
+
+#Blueberry:hover {
+    animation: squishy 1s ease-in-out infinite;
+}
+
+/* Passion Fruit */
+#Passion_Fruit:hover ~ #logo {
+    fill: #cf1d61;
+}
+
+#Passion_Fruit:hover {
+    transform: rotateY(180deg);
+    transition: transform 2s ease;
+}
