@@ -3,7 +3,6 @@
 }
 
 html, body { 
-    width: 1920px;
     height: 100%;
 }
 
@@ -27,7 +26,7 @@ body {
 
 #fruits svg {
     height: 150px;
-    margin: 50px 175px;
+    margin: 25px 120px;
 }
 
 /* Grapefruit */
@@ -51,6 +50,11 @@ body {
     transition: transform 0.3s ease;
 }
 
+#Orange:hover .org-2, #Orange:hover .org-3  {
+    transform: rotate(360deg);
+    transition-duration: 2s;
+}
+
 /* Pineapple */
 #Pineapple:hover ~ #logo {
     fill: #ffcc4d;
@@ -65,8 +69,34 @@ body {
     }
 }
 
+@keyframes reversey1 {
+    0%, 100% { 
+        fill: #ffcc4d;
+    }
+    50% { 
+        fill: #5d913f;
+    }
+}
+
+@keyframes reversey2 {
+    0%, 100% { 
+        fill: #5d913f;
+    }
+    50% { 
+        fill: #ffcc4d;
+    }
+}
+
 #Pineapple:hover {
     animation: bouncy 0.5s ease-out infinite;
+}
+
+#Pineapple:hover .pine-2 {
+    animation: reversey1 0.5s ease-out infinite;
+}
+
+#Pineapple:hover .pine-3 {
+    animation: reversey2 0.5s ease-out infinite;
 }
 
 /* Lime */
@@ -119,4 +149,9 @@ body {
 #Passion_Fruit:hover {
     transform: rotateY(180deg);
     transition: transform 2s ease;
+}
+
+#Passion_Fruit:hover .passion-2, #Passion_Fruit:hover .passion-4, #Passion_Fruit:hover .passion-6 {
+    transition-delay: 0.6s;
+    fill: #cf1d61;
 }
