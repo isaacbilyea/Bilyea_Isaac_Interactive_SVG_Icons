@@ -2,11 +2,10 @@
     display: none;
 }
 
-html, body { 
-    height: 100%;
-}
-
 body {
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
     background-image: url(../images/fruit_background.jpg);
     background-size: cover;
 }
